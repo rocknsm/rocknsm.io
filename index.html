@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Bro IDS Snort Suricata Stenographer Enterprise Linux SELinux ELK Elasticserch Logstash Kibana MOCYBER ROCK NSM ROCKNSM">
+    <meta name="description" content="Response Operation Collection Kit - ROCK NSM is a durable Network Security Monitoring sensor built with scalability, security, and hunt-centric tactics in mind.">
+    <title>ROCK NSM</title>
+    <script src="https://use.fontawesome.com/1200d58248.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
+    <link rel="icon" href="/favicon.ico">
+    
+    
+    
+        <!--[if lte IE 8]>
+            <link rel="stylesheet" href="css/layouts/side-menu-old-ie.css">
+        <![endif]-->
+        <!--[if gt IE 8]><!-->
+            <link rel="stylesheet" href="css/layouts/side-menu.css">
+        <!--<![endif]-->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73705120-1', 'auto');
+  ga('send', 'pageview');
+
+</script> 
+</head>
+<body>
+
+
+
+
+
+
+<div id="layout">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+    </a>
+
+    <div id="menu">
+        <div class="pure-menu">
+            <a class="pure-menu-heading" href="#"><i class="fa fa-area-chart fa-sm" aria-hidden="true"></i> ROCK NSM</a>
+
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item"><a href="http://rocknsm.io" class="pure-menu-link"><i class="fa fa-home fa-sm" aria-hidden="true"></i> Home</a></li>
+		<li class="pure-menu-item" class="pure-menu-item"><a href="https://github.com/rocknsm/rock-createiso/releases" class="pure-menu-link"><i class="fa fa-download fa-sm" aria-hidden="true"></i> Download</a></li>
+                <li class="pure-menu-item"><a href="https://rocknsm.gitbooks.io/rocknsm-guide/content/" class="pure-menu-link"><i class="fa fa-book fa-sm" aria-hidden="true"></i> Documentation</a></li>
+
+                <li class="pure-menu-item" class="pure-menu-item">
+                    <a href="https://github.com/rocknsm" class="pure-menu-link"><i class="fa fa-github fa-sm" aria-hidden="true"></i> Github</a>
+                </li>
+                <li class="pure-menu-item"><a href="mailto:info@rocknsm.io" class="pure-menu-link"><i class="fa fa-envelope fa-sm" aria-hidden="true"></i> Email</a></li>
+		<li class="pure-menu-item" class="pure-menu-item"><a href="https://twitter.com/rocknsm/" class="pure-menu-link"><i class="fa fa-twitter fa-sm" aria-hidden="true"></i> Twitter</a></li>
+		<li class="pure-menu-item" class="pure-menu-item"><a href="http://community.rocknsm.io/" class="pure-menu-link"><i class="fa fa-comment-o" aria-hidden="true"></i> Community</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="header">
+            <img src="images/rock_full.png" width="620" />
+            <h1>ROCK NSM</h1>
+            <h2>(Response Operation Collection Kit)</h2>
+            <h2>An open source Network Security Monitoring platform. </h2>
+        </div>
+
+        <div class="content">
+            <img src="images/single_architecture.png" width="800" />
+            <h2 class="content-subhead"><a class="anchor" href="#response-operation-collections-kit-reference-build" aria-hidden="true"></a>Response Operation Collection Kit</h2>
+
+        <p>
+ROCK is a collections platform, in the spirit of Network Security Monitoring by contributors from all over industry and the public sector. It's primary focus is to provide a robust, scalable sensor platform for both enduring security monitoring and incident response missions. The platform consists of 3 core capabilities:
+
+        <ul class="fa-ul">
+            <li><i class="fa-li fa fa-square"></i>
+Passive data acquisition via AF_PACKET, feeding systems for metadata (Bro), signature detection (Suricata or Snort), and full packet capture (Stenographer).
+            </li>
+            <li><i class="fa-li fa fa-square"></i>
+A messaging layer (Kafka and Logstash) that provides flexibility in scaling the platform to meet operational needs, as well as providing some degree of data reliability in transit.
+            </li>
+            <li><i class="fa-li fa fa-square"></i>
+Reliable data storage and indexing (Elasticsearch) to support rapid retrieval and analysis (Kibana) of the data.
+            </li>
+        </ul>
+        </p>
+
+        <h2 class="content-subhead">Features</h2>
+        <p>
+        <ul class="fa-ul">
+            <li><i class="fa-li fa fa-check-square"></i><strong>Full Packet Capture</strong> via <a href="https://github.com/google/stenographer" target="_blank">Google Stenographer</a>.</li>
+            <li><i class="fa-li fa fa-check-square"></i><strong>Protocol Analysis and Metadata</strong> via <a href="http://bro.org/" target="_blank">Bro</a>.</li>
+            <li><i class="fa-li fa fa-check-square"></i><strong>Signature Based Alerting</strong> via <a href="https://suricata-ids.org/" target="_blank">Suricata</a> or <a href="http://snort.org/" target="_blank">Snort</a>.</li>
+            <li><i class="fa-li fa fa-check-square"></i><strong>Recursive File Scanning</strong> via <a href="https://github.com/EmersonElectricCo/fsf" target="_blank">FSF</a>.</li>
+            <li><i class="fa-li fa fa-check-square"></i><strong>Message Queuing and Distribution</strong> via <a href="http://kafka.apache.org/" target="_blank">Apache Kafka</a>.</li>
+            <li><i class="fa-li fa fa-check-square"></i><strong>Message Transport</strong> via <a href="https://www.elastic.co/products/logstash" target="_blank">Logstash</a>.</li>
+            <li><i class="fa-li fa fa-check-square"></i><strong>Data Storage, Indexing, and Search</strong> via <a href="https://www.elastic.co/" target="_blank">Elasticsearch</a>.</li>
+            <li><i class="fa-li fa fa-check-square"></i><strong>Data UI and Visualization</strong> via <a href="https://www.elastic.co/products/kibana" target="_blank">Kibana</a>.</li>
+            <li><i class="fa-li fa fa-check-square"></i><strong>Security</strong> - The system is developed and tested to run with SELinux enabled.</li>
+        </ul>
+        </p>
+
+        <h2 class="content-subhead">THANKS</h2>
+
+        <p>This architecture is made possible by the efforts of an ever-growing list of amazing people. Look around our <a href="https://github.com/rocknsm">Github</a> to see the whole list.</p>
+
+        <h2 class="content-subhead">Approach</h2>
+
+        <p>The Ansible playbook that drives this build strives not to use any external roles or other dependencies. The reasoning behind this is to make the rock playbook a "one-stop" reference for a manual build. This allows users to use the build process as a guide when doing larger scale production roll outs without having to decipher a labyrinth of dependencies.</p>
+
+        <p>Templated config files have comment sections added near key config items with useful info.  They don't all have it, but they get added as remembered.</p>
+
+        <footer>
+            <small>
+          <i class="fa fa-rebel fa-sm" aria-hidden="true"></i>  All views expressed in code comments and documentation are those of the individual contributor.
+            </small>
+        </footer>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="js/ui.js"></script>
+
+</body>
+</html>
